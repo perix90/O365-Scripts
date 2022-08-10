@@ -7,40 +7,69 @@ Write-Host("WELCOME TO OFFICE 365 MANAGEMENT V0.1 BY PEDRO GORDILLO RIOS") -Fore
 
 
 
+do{
 
+
+
+
+
+Write-Host("")
 Write-Host("Select one of the following options:") -ForegroundColor Green
 Write-Host("")
 
-Write-Host("1.- Exchange.") -ForegroundColor Yellow
+Write-Host("1.- Exchange") -ForegroundColor Yellow
 Write-Host("2.- Teams") -ForegroundColor Yellow
-Write-Host("2.- Teams") -ForegroundColor Yellow
+Write-Host("3.- Sharepoint") -ForegroundColor Yellow
+Write-Host("0.- Exit") -ForegroundColor Yellow
 
 
 
 Write-Host("")
-$choice = Read-Host -Prompt "Select one of the options above"
+$choiceMain = Read-Host -Prompt "Select one of the options above"
 
 
-switch ( $choice )
+switch ( $choiceMain )
 {
     1 {
 
+    cls
+    Write-Host("------ EXCHANGE----") -ForegroundColor Green
+    Write-Host("")
+    Write-Host("Select one of the following options:") -ForegroundColor Green
+    Write-Host("")
+
+    Write-Host("1.- TASK1") -ForegroundColor Yellow
+  
+    Write-Host("")
+    $choiceExchange = Read-Host -Prompt "Select one of the options above"
+
+    switch ( $choiceExchange ) {
     
+    1 {
 
-    }
 
-    2 {
 
-    
+
+     
 
     }
 }
 
 
-Write-Host("")
+     
+
+    }
+}
+
 
 
 #Disconnect-ExchangeOnline -Confirm:$false -InformationAction Ignore -ErrorAction SilentlyContinue
+
+}while($choiceMain = 0)
+
+cls
+Write-Host("Thank you for using this script :) ") -ForegroundColor Green
+
 
 
 
